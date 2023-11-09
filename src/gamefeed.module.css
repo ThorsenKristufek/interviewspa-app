@@ -1,0 +1,101 @@
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4vw; /* Use viewport width for scalable font size, with a minimum size */
+  margin-top: 10vh; 
+}
+
+.logo {
+  width: auto;
+  height: 5vh; 
+  margin-left: 2vw; 
+}
+
+.gameContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: calc(100vh - 20vh); 
+  padding-top: 2vh;
+  position: relative;
+}
+
+.gameRow {
+  display: flex;
+  justify-content: space-around; 
+  align-items: center;
+  padding: 2vw; 
+  margin: 2vw 0; 
+  background-color: #fff;
+  color: black;
+  border-radius: 5px;
+  width: calc(100% - 40vw); 
+  max-width: 600px;
+  position: relative;
+}
+
+.teamName, .score, .inning, .outs {
+  flex: 1; 
+  text-align: center;
+  padding: 0 1vw; 
+}
+
+.teamLogoContainer {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20vw; 
+  height: auto; 
+}
+
+.teamLogo {
+  width: 100%; 
+  height: auto; 
+  object-fit: contain;
+}
+
+.awayTeamLogo {
+  left: 0; 
+}
+
+.homeTeamLogo {
+  right: 0; 
+}
+
+@media (max-width: 768px) {
+  .header {
+    font-size: 6vw; 
+  }
+
+  .logo {
+    height: 4vh; 
+  }
+
+  .gameContainer {
+    min-height: calc(100vh - 25vh); 
+  }
+
+  .gameRow {
+    padding: 5vw; 
+    margin: 5vw 0; 
+    width: calc(100% - 80vw); 
+  }
+
+  .teamName, .score, .inning, .outs {
+    padding: 0 2vw; 
+  }
+
+  .teamLogoContainer {
+    width: 15vw; 
+  }
+
+  .awayTeamLogo {
+    left: -15vw; 
+  }
+
+  .homeTeamLogo {
+    right: -15vw; 
+  }
+}
